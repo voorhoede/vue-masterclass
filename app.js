@@ -20,11 +20,28 @@ import './components/user-profile.js';
 */
 
 window.chat = {
-    messages : []
+    user : {
+        name : "Anoniempje",
+        avatar : "./images/avatar.png"
+    },
+    channels : [
+        {
+            name : 'Daily'
+        },
+        {
+            name : 'General'
+        }
+    ],
+    currentChannel : 'Daily',
+    messages : [],
+    searching : false,
+    searchText : ''
 }
 
 window.app = new Vue({
     el: '.app',
+
+    data : window.chat,
 
     watch : {
         newProp() {
