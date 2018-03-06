@@ -15,7 +15,7 @@ Vue.component('message-list', {
                 No messages
             </div>
 
-            <ol class="message-list__list">
+            <transition-group tag="ol" class="message-list__list" name="pop">
                 <template v-for="message of messages">
                     <text-message 
                         v-if="message.type === 'text'"
@@ -32,7 +32,7 @@ Vue.component('message-list', {
                         :user="message.user">
                     </cat-message>
                 </template>
-            </ol>
+            </transition-group>
         </div>
     `
 });

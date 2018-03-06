@@ -1,1 +1,33 @@
 /* implement your transitions here */
+
+.pop-enter {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.pop-enter-active {
+    transition: opacity .2s ease-out, transform .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+@keyframes slide-from-right {
+    0% {
+        transform: translateX(100%);
+    }
+    70% {
+        transform: translateX(-3%);
+    }
+}
+
+@keyframes slide-to-right {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.slide-from-right-enter-active {
+    animation: slide-from-right .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.slide-from-right-leave-active {
+    animation: slide-to-right .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}

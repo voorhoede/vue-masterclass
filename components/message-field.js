@@ -12,8 +12,10 @@ Vue.component('message-field', {
 
     methods : {
         onSubmit() {
-            this.$emit('submit', this.text);
-            this.text = '';
+            if(this.text !== '') {
+                this.$emit('submit', this.text);
+                this.text = '';
+            }
         }
     }
 });
