@@ -1,21 +1,25 @@
-/*
-    Define your components here.
-
-    Example:
-
-    Vue.component('message-list', {
-
-    })
-*/
+import './components/app-header.js';
+import './components/app-sidebar.js';
+import './components/channel-list.js';
+import './components/chat-section.js';
+import './components/message-list.js';
+import './components/message-field.js';
+import './components/message.js';
+import './components/search-form.js';
+import './components/search-sidebar.js';
+import './components/user-profile.js';
 
 const app = new Vue({
-    el : '.app',
+    el: '.app',
 
-    //Uncomment the next code and list your components inside the app div
-
-    /* template : `<div class="app app--searching">
-    
-    </div>` */
+    template : `
+        <div class="app app--searching">
+            <app-header></app-header>
+            <app-sidebar></app-sidebar>
+            <chat-section></chat-section>
+            <search-sidebar></search-sidebar>
+        </div>
+    `
 });
 
 Vue.config.devtools = true;
