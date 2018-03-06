@@ -54,7 +54,7 @@ window.app = new Vue({
     },
 
     template : `
-        <div class="app app--searching">
+        <div class="app" :class="{'app--searching' : searching}">
             <app-header></app-header>
             <app-sidebar></app-sidebar>
             <chat-section></chat-section>
