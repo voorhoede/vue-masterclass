@@ -14,12 +14,21 @@ Vue.component('chat-section', {
 
     methods : {
         onSubmit(text) {
-            this.messages.push({
-                id : this.messages.length,
-                date : new Date(),
+            let message = {
                 user : this.user,
-                text,
-            });
+                id : this.messages.length+1,
+                date : new Date()
+            }
+
+            if(text.indexOf('/cat') === 0) {
+                message.type = 'cat';
+            }
+            else {
+                message.type = 'text';
+                message.text = text;
+            }
+
+            this.messages.push(message);
         }
     }
 });

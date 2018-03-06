@@ -4,10 +4,13 @@ import './components/channel-list.js';
 import './components/chat-section.js';
 import './components/message-list.js';
 import './components/message-field.js';
-import './components/message.js';
 import './components/search-form.js';
 import './components/search-sidebar.js';
 import './components/user-profile.js';
+
+import './components/message.js';
+import './components/text-message.js';
+import './components/cat-message.js';
 
 /*
     Look at the ui in the browser and determine the data structure for your slack clone.

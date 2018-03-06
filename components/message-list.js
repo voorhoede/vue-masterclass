@@ -16,15 +16,22 @@ Vue.component('message-list', {
             </div>
 
             <ol class="message-list__list">
-                <message 
-                    v-for="message of messages" 
-                    :key="message.id" 
-                    :text="message.text"
-                    :avatar="message.user.avatar"
-                    :date="message.date"
-                    :user="message.user"
-                    >
-                </message>
+                <template v-for="message of messages">
+                    <text-message 
+                        v-if="message.type === 'text'"
+                        :key="message.id" 
+                        :date="message.date"
+                        :user="message.user"
+                        :text="message.text">
+                    </text-message>
+
+                    <cat-message 
+                        v-else-if="message.type === 'cat'"
+                        :key="message.id" 
+                        :date="message.date"
+                        :user="message.user">
+                    </cat-message>
+                </template>
             </ol>
         </div>
     `
