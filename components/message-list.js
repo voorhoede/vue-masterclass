@@ -11,9 +11,9 @@ Vue.component('message-list', {
 
     template : `
         <div class="message-list">
-            <div class="message-list__empty">
+            <!--<div class="message-list__empty">
                 No messages
-            </div>
+            </div>-->
 
             <ol class="message-list__list">
                 <message></message>
