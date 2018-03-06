@@ -10,10 +10,6 @@ Vue.component('message', {
         date : {
             type : Date,
             required : true
-        },
-        text : {
-            type : String,
-            required : true
         }
     },
 
@@ -25,7 +21,7 @@ Vue.component('message', {
                 <span class="message__date">{{ date.toLocaleTimeString() }}</span>
             </div>
             <div class="message__content">
-                {{ text }}
+                
             </div>
         </li>
     `
