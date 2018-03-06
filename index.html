@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    
+    <body>
+        <div class="app app--searching">
+            <header class="app-header">
+                <h2 class="app-header__title">#_general</h2>
+                <form class="search-form">
+                    <input type="search" placeholder="Search" class="reset-text search-field">
+                </form>
+            </header>
+            <aside class="app-sidebar">
+                <h1 class="app-sidebar__title">De Voorhoede</h1>
+                <div class="user-profile">
+                    <label for="name" class="user-profile__label">Name</label>
+                    <input type="text" id="name" value="Anoniempje" class="reset-text user-profile__name">
+                </div>
+                <div class="channel-list">
+                    <h2 class="channel-list__header">Channels</h2>
+                    <ul>
+                        <li class="channel-list__item channel-list__item--current">
+                            <span class="channel-list__bullet">#</span> Daily
+                        </li>
+                        <li class="channel-list__item">
+                            <span class="channel-list__bullet">#</span> General
+                        </li>
+                    </ul>
+                </div>
+            </aside> 
+            <section class="chat-section">
+                <div class="chat-section__messages">
+                    <div class="message-list">
+                        <!-- <div class="message-list__empty">No messages</div> -->
+
+                        <ol class="message-list__list">
+                            <li class="message">
+                                <div class="message__header">
+                                    <img src="images/avatar.png" class="message__avatar"> 
+                                    <strong>Anoniempje</strong> 
+                                    <span class="message__date">11:23:09</span>
+                                </div>
+                                <div class="message__content">
+                                    hello world
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div> 
+                <form class="message-field chat-section__field">
+                    <input type="text" autofocus placeholder="Message" class="reset-text message-field__input">
+                    <input type="submit" disabled class="message-field__submit">
+                </form>
+            </section>
+            <aside class="search-sidebar">
+                <button aria-label="Close" title="Close" class="reset-button search-sidebar__close"></button> 
+                <h2 class="search-sidebar__header">0 Messages</h2>
+                <div class="message-list">
+                    <!-- <div class="message-list__empty">No messages found for ""</div> -->
+
+                    <ol class="message-list__list">
+                        <li class="message">
+                            <div class="message__header">
+                                <img src="images/avatar.png" class="message__avatar">
+                                <strong>Anoniempje</strong> 
+                                <span class="message__date">11:23:09</span>
+                            </div>
+                            <div class="message__content">
+                                hello world
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </aside>
+        </div>
+
+        <script type="module" src="app.js"></script>
+    </body>
+</html>
