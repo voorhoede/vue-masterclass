@@ -19,7 +19,7 @@ Vue.component('text-message', {
 
     template : `
         <message v-bind:user="user" v-bind:date="date">
-            <!-- use slots to display the content as text -->
+            <template slot="content">{{ text }}</template>
         </message>
     `
 });

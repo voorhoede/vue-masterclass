@@ -16,12 +16,14 @@ Vue.component('message', {
     template : `
         <li class="message">
             <div class="message__header">
-                <img v-bind:src="user.avatar" class="message__avatar"> 
-                <strong>{{ user.name }}</strong> 
-                <span class="message__date">{{ date.toLocaleTimeString() }}</span>
+                <slot name="header">
+                    <img v-bind:src="user.avatar" class="message__avatar"> 
+                    <strong>{{ user.name }}</strong> 
+                    <span class="message__date">{{ date.toLocaleTimeString() }}</span>
+                </slot>
             </div>
             <div class="message__content">
-                
+                <slot name="content"></slot>
             </div>
         </li>
     `
