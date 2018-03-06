@@ -10,8 +10,14 @@ Vue.component('message-list', {
     },
 
     template : `
-        <ol class="message-list__list">
-            <message></message>
-        </ol>
+        <div class="message-list">
+            <!--<div class="message-list__empty">
+                No messages
+            </div>-->
+
+            <ol class="message-list__list">
+                <message></message>
+            </ol>
+        </div>
     `
 });
