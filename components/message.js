@@ -1,12 +1,11 @@
 Vue.component('message', {
     props : {
-        avatar : {
-            type : String,
-            required : true
-        },
         user : {
             type : Object,
-            required : true
+            required : true,
+            validator : function (value) {
+                return "name" in value && "avatar" in value;
+            }
         },
         date : {
             type : Date,
