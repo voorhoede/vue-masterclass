@@ -10,5 +10,16 @@ Vue.component('chat-section', {
             </div> 
             <message-field class="chat-section__field"></message-field>
         </section>
-    `
+    `,
+
+    methods : {
+        createMessage(text) {
+            return {
+                text, 
+                date : new Date(),
+                user : this.user,
+                id : this.messages.length
+            }
+        }
+    }
 });
