@@ -13,12 +13,16 @@ Vue.component('chat-section', {
     `,
 
     methods : {
-        onSubmit(text) {
-            let message = {
+        createMessage() {
+            return {
+                date : new Date(),
                 user : this.user,
-                id : this.messages.length+1,
-                date : new Date()
+                id : this.messages.length
             }
+        },
+
+        onSubmit(text) {
+            let message = this.createMessage();
 
             if(text.indexOf('/cat') === 0) {
                 message.type = 'cat';
