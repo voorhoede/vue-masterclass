@@ -16,8 +16,7 @@ Vue.component('chat-section', {
         createMessage() {
             return {
                 date : new Date(),
-                user : this.user,
-                id : this.messages.length
+                user : this.userId
             }
         },
 
@@ -25,14 +24,14 @@ Vue.component('chat-section', {
             let message = this.createMessage();
 
             if(text.indexOf('/cat') === 0) {
-                message.type = 'cat';
+                message.messageType = 'cat';
             }
             else {
-                message.type = 'text';
+                message.messageType = 'text';
                 message.text = text;
             }
 
-            this.messages.push(message);
+            window.api.addMessage(message);
         }
     }
 });

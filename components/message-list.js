@@ -18,16 +18,16 @@ Vue.component('message-list', {
             <transition-group tag="ol" class="message-list__list" name="pop">
                 <template v-for="message of messages">
                     <text-message 
-                        v-if="message.type === 'text'"
-                        :key="message.id" 
+                        v-if="message.messageType === 'text'"
+                        :key="message._id" 
                         :date="message.date"
                         :user="message.user"
                         :text="message.text">
                     </text-message>
 
                     <cat-message 
-                        v-else-if="message.type === 'cat'"
-                        :key="message.id" 
+                        v-else-if="message.messageType === 'cat'"
+                        :key="message._id" 
                         :date="message.date"
                         :user="message.user">
                     </cat-message>
