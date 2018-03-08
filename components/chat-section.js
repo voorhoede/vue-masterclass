@@ -13,13 +13,19 @@ Vue.component('chat-section', {
     `,
 
     methods : {
-        onSubmit(text) {
-            this.messages.push({
-                id : this.messages.length,
+        createMessage(text) {
+            return {
+                text, 
                 date : new Date(),
                 user : this.user,
-                text,
-            });
+                id : this.messages.length
+            }
+        },
+
+        onSubmit(text) {
+            this.messages.push(
+                this.createMessage(text)
+            );
         }
     }
 });
