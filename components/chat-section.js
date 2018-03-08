@@ -8,7 +8,7 @@ Vue.component('chat-section', {
             <div class="chat-section__messages">
                 <message-list v-bind:messages="messages"></message-list>
             </div> 
-            <message-field class="chat-section__field"></message-field>
+            <message-field v-on:submit="onSubmit" class="chat-section__field"></message-field>
         </section>
     `,
 
@@ -20,6 +20,12 @@ Vue.component('chat-section', {
                 user : this.user,
                 id : this.messages.length
             }
+        },
+
+        onSubmit(text) {
+            this.messages.push(
+                this.createMessage(text)
+            );
         }
     }
 });
