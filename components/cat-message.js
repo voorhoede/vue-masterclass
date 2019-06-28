@@ -15,7 +15,9 @@ Vue.component('cat-message', {
 
     template : `
         <message v-bind:user="user" v-bind:date="date">
-            <img slot="content" src="http://thecatapi.com/api/images/get?format=src&type=gif">
+            <template v-slot:content>
+                <img src="http://thecatapi.com/api/images/get?format=src&type=gif">
+            </template>
         </message>
     `
 });
