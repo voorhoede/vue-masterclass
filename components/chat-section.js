@@ -1,4 +1,8 @@
 Vue.component('chat-section', {
+    data : function () {
+        return window.chat;
+    },
+
     template : `
         <section class="chat-section">
             <div class="chat-section__messages">
