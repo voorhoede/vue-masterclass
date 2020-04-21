@@ -1,0 +1,23 @@
+{
+  "name": "vue-masterclass",
+  "version": "1.0.0",
+  "description": "Split the app into components.",
+  "main": "app.js",
+  "scripts": {
+    "start": "serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voorhoede/vue-masterclass.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/voorhoede/vue-masterclass/issues"
+  },
+  "homepage": "https://github.com/voorhoede/vue-masterclass#readme",
+  "dependencies": {
+    "serve": "^11.3.0"
+  }
+}
