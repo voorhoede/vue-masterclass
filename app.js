@@ -22,6 +22,8 @@ import './components/cat-message.js';
     - Add a new property called 'newProp' through the browser console. What happens?
 */
 
+Vue.use(vueCompositionApi.default);
+
 window.chat = {
     user : {
         name : "Anoniempje",
