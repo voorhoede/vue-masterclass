@@ -1,6 +1,8 @@
-# Exercise 8
+# Exercise 9
 
-Add some animations to the App!
+Experiment with the [composition API](https://composition-api.vuejs.org/)
 
-- Animate the message items using transition-group
-- Animate the search sidebar
+- Use `setup()` in your component and see if it works
+- Convert `data()` into state in `setup()`
+- Convert the methods into functions in your `setup()`
+- Seperate your messages logic into a `useMessages()` function outside of your component
