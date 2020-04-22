@@ -1,3 +1,9 @@
+// TODO:
+// 1. use setup() in your component and see if it works
+// 2. convert data() into state in setup()
+// 3. convert the methods into functions in your setup()
+// 4. seperate your messages logic into a useMessages() function outside of your component
+
 Vue.component('chat-section', {
     data : function () {
         return window.chat;
